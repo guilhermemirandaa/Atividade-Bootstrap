@@ -38,6 +38,50 @@
   </header>
 
   <main id="conteudo">
+    <section id="destaques" aria-labelledby="titulo-destaques">
+      <h2 id="titulo-destaques" class="visually-hidden">Destaques</h2>
+
+      <div id="carrosselDestaques" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carrosselDestaques" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carrosselDestaques" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carrosselDestaques" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="4000">
+            <img src="https://picsum.photos/seed/loja1/1200/450" class="d-block w-100" alt="Fones de ouvido em promoção">
+            <div class="carousel-caption">
+              <h3>Semana da Tecnologia</h3>
+              <p>Até 30% de desconto em eletrônicos.</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="4000">
+            <img src="https://picsum.photos/seed/loja2/1200/450" class="d-block w-100" alt="Roupas da nova coleção">
+            <div class="carousel-caption">
+              <h3>Nova Coleção</h3>
+              <p>Roupas para todas as estações.</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="4000">
+            <img src="https://picsum.photos/seed/loja3/1200/450" class="d-block w-100" alt="Pacote sendo entregue">
+            <div class="carousel-caption">
+              <h3>Frete Grátis</h3>
+              <p>Em compras acima de R$ 199,00.</p>
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carrosselDestaques" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carrosselDestaques" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Próximo</span>
+        </button>
+      </div>
+    </section>
   </main>
 
   <footer class="bg-dark text-light text-center py-4 mt-5">
