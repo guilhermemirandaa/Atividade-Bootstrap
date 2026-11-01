@@ -323,6 +323,26 @@
     <p>© 2026 Loja Virtual. Atividade de Tópicos Avançados em Programação.</p>
   </footer>
 
+  <dialog id="modalProduto" class="m-auto w-[calc(100%-2rem)] max-w-lg rounded-2xl p-0 shadow-xl backdrop:bg-black/50" aria-labelledby="modalProdutoTitulo">
+    <div class="flex items-center justify-between border-b border-slate-200 px-5 py-4">
+      <h2 id="modalProdutoTitulo" class="text-lg font-semibold">Produto</h2>
+      <button type="button" class="fechar-modal rounded-lg p-1 text-slate-500 hover:bg-slate-100" aria-label="Fechar">
+        <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" d="M6 6l12 12M18 6L6 18" />
+        </svg>
+      </button>
+    </div>
+    <div class="px-5 py-4">
+      <img id="modalProdutoImagem" src="https://picsum.photos/seed/fone/600/400" class="mb-4 w-full rounded-lg" alt="">
+      <p id="modalProdutoDescricao" class="text-slate-600"></p>
+      <p id="modalProdutoPreco" class="mt-3 text-2xl font-bold text-indigo-700"></p>
+    </div>
+    <div class="flex justify-end gap-2 border-t border-slate-200 px-5 py-4">
+      <button type="button" class="fechar-modal rounded-lg border border-slate-300 px-4 py-2 hover:bg-slate-100">Fechar</button>
+      <button type="button" class="fechar-modal rounded-lg bg-indigo-600 px-4 py-2 font-medium text-white hover:bg-indigo-700">Adicionar ao carrinho</button>
+    </div>
+  </dialog>
+
   <script src="script.js"></script>
 </body>
 </html>

@@ -57,3 +57,25 @@ formulario.addEventListener('submit', (evento) => {
   aviso.classList.remove('hidden')
   formulario.reset()
 })
+
+const modal = document.querySelector('#modalProduto')
+
+document.querySelectorAll('.abrir-modal').forEach((botao) => {
+  botao.addEventListener('click', () => {
+    const imagem = modal.querySelector('#modalProdutoImagem')
+    modal.querySelector('#modalProdutoTitulo').textContent = botao.dataset.nome
+    modal.querySelector('#modalProdutoDescricao').textContent = botao.dataset.descricao
+    modal.querySelector('#modalProdutoPreco').textContent = botao.dataset.preco
+    imagem.src = botao.dataset.imagem
+    imagem.alt = botao.dataset.nome
+    modal.showModal()
+  })
+})
+
+modal.querySelectorAll('.fechar-modal').forEach((botao) => {
+  botao.addEventListener('click', () => modal.close())
+})
+
+modal.addEventListener('click', (evento) => {
+  if (evento.target === modal) modal.close()
+})
