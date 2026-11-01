@@ -257,6 +257,66 @@
         </table>
       </div>
     </section>
+
+    <section id="contato" class="mx-auto max-w-6xl px-4 pb-12" aria-labelledby="titulo-contato">
+      <h2 id="titulo-contato" class="mb-6 text-2xl font-bold md:text-3xl">Fale conosco</h2>
+
+      <div class="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
+        <p id="avisoContato" class="mb-4 hidden rounded-lg bg-green-100 px-4 py-3 text-green-800" role="status">
+          Mensagem enviada com sucesso! Responderemos em até 2 dias úteis.
+        </p>
+
+        <form id="formContato" class="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <div>
+            <label for="nome" class="mb-1 block font-medium">Nome</label>
+            <input type="text" id="nome" name="nome" minlength="3" autocomplete="name" required class="peer w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 focus:outline-none user-invalid:border-red-500">
+            <p class="mt-1 hidden text-sm text-red-600 peer-user-invalid:block">Informe seu nome com pelo menos 3 letras.</p>
+          </div>
+
+          <div>
+            <label for="email" class="mb-1 block font-medium">E-mail</label>
+            <input type="email" id="email" name="email" autocomplete="email" required class="peer w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 focus:outline-none user-invalid:border-red-500">
+            <p class="mt-1 hidden text-sm text-red-600 peer-user-invalid:block">Informe um e-mail válido.</p>
+          </div>
+
+          <div>
+            <label for="telefone" class="mb-1 block font-medium">Telefone <span class="font-normal text-slate-500">(opcional)</span></label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(71) 99999-9999" autocomplete="tel" class="w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 focus:outline-none user-invalid:border-red-500">
+          </div>
+
+          <div>
+            <label for="assunto" class="mb-1 block font-medium">Assunto</label>
+            <select id="assunto" name="assunto" required class="peer w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 focus:outline-none user-invalid:border-red-500 bg-white">
+              <option value="" selected disabled>Escolha um assunto</option>
+              <option>Dúvida sobre produto</option>
+              <option>Acompanhar pedido</option>
+              <option>Troca ou devolução</option>
+              <option>Outro</option>
+            </select>
+            <p class="mt-1 hidden text-sm text-red-600 peer-user-invalid:block">Escolha um assunto.</p>
+          </div>
+
+          <div class="md:col-span-2">
+            <label for="mensagem" class="mb-1 block font-medium">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="4" minlength="10" required class="peer w-full rounded-lg border border-slate-300 px-3 py-2 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 focus:outline-none user-invalid:border-red-500"></textarea>
+            <p class="mt-1 hidden text-sm text-red-600 peer-user-invalid:block">Escreva uma mensagem com pelo menos 10 caracteres.</p>
+          </div>
+
+          <div class="md:col-span-2">
+            <div class="flex items-center gap-2">
+              <input type="checkbox" id="termos" name="termos" required class="h-4 w-4 accent-indigo-600">
+              <label for="termos">Aceito receber o retorno por e-mail.</label>
+            </div>
+          </div>
+
+          <div class="md:col-span-2">
+            <button type="submit" class="rounded-lg bg-indigo-600 px-6 py-2 font-medium text-white hover:bg-indigo-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+              Enviar mensagem
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
   </main>
 
   <footer class="mt-12 bg-slate-900 py-6 text-center text-slate-300">

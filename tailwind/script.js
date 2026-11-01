@@ -48,3 +48,12 @@ document.querySelector('#anterior').addEventListener('click', () => mostrarSlide
 document.querySelector('#proximo').addEventListener('click', () => mostrarSlide(atual + 1))
 pontos.forEach((ponto, i) => ponto.addEventListener('click', () => mostrarSlide(i)))
 mostrarSlide(0)
+
+const formulario = document.querySelector('#formContato')
+const aviso = document.querySelector('#avisoContato')
+
+formulario.addEventListener('submit', (evento) => {
+  evento.preventDefault()
+  aviso.classList.remove('hidden')
+  formulario.reset()
+})
