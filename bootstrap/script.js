@@ -27,3 +27,14 @@ modalProduto.addEventListener('show.bs.modal', (evento) => {
   imagem.src = botao.dataset.imagem
   imagem.alt = botao.dataset.nome
 })
+
+const menu = document.querySelector('#menu')
+const linksMenu = document.querySelectorAll('#menu .nav-link')
+
+linksMenu.forEach((link) => {
+  link.addEventListener('click', () => {
+    if (menu.classList.contains('show')) {
+      bootstrap.Collapse.getOrCreateInstance(menu).hide()
+    }
+  })
+})
